@@ -1,3 +1,5 @@
+const apiToken = process.env.NUXT_API_TOKEN;
+
 module.exports = {
   async afterCreate(event) {
     const { result } = event; // The created entry
@@ -7,7 +9,7 @@ module.exports = {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Add any necessary authentication headers (e.g., Authorization)
+          'Authorization': `Bearer ${apiToken}`,
         },
         body: JSON.stringify(result),
       });
@@ -28,7 +30,7 @@ module.exports = {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          // Add any necessary authentication headers (e.g., Authorization)
+          'Authorization': `Bearer ${apiToken}`,
         },
         body: JSON.stringify(result),
       });
@@ -49,7 +51,7 @@ module.exports = {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
-          // Add any necessary authentication headers (e.g., Authorization)
+          'Authorization': `Bearer ${apiToken}`,
         },
         body: JSON.stringify(result),
       });
