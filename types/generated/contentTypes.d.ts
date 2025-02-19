@@ -393,6 +393,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Name: Schema.Attribute.String & Schema.Attribute.Required;
     Photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Photos: Schema.Attribute.Media<'images' | 'videos', true> &
+      Schema.Attribute.Required;
     Price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

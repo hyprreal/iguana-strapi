@@ -29,6 +29,15 @@
     },
     "Price": {
       "type": "decimal"
+    },
+    "Photos": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }
