@@ -19,14 +19,6 @@
     "Description": {
       "type": "blocks"
     },
-    "Photo": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "Price": {
       "type": "decimal"
     },
